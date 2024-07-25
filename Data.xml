@@ -1030,6 +1030,23 @@
       </Scan>
     </Item>
 
+    <Item Name="#ToDesk日志" Level="3">
+      <Description>#Todesk运行时产生的一些日志文件，不影响程序使用，建议定期删除。</Description>
+      <Group>#临时文件</Group>
+      <Scan>
+        <Applicable>
+          <Or>
+            <FileExist FilePath="%ProgramFiles%\ToDesk\Logs"/>
+            <FileExist FilePath="%USERPROFILE%\AppData\Local\ToDesk\Logs"/>
+          </Or>
+        </Applicable>
+        <Activate>
+          <General RootPath="%ProgramFiles%\ToDesk\Logs\"/>
+          <General RootPath="%USERPROFILE%\AppData\Local\ToDesk\Logs\"/>
+        </Activate>
+      </Scan>
+    </Item>
+
     <Item Name="#飞信日志" Level="3">
       <Description>#飞信运行时产生的一些日志文件。</Description>
       <Group>#临时文件</Group>
