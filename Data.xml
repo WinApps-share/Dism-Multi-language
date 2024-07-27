@@ -1143,6 +1143,20 @@
         </Activate>
       </Scan>
     </Item>
+
+    <Item Name="#NeatDM临时文件" Level="3">
+      <Description>#Neat Download Manager临时下载文件。</Description>
+      <Warning>#清理NeatDM临时文件，会导致日志无法查看和未完成任务需要重新下载！</Warning>
+      <Group>#临时文件</Group>
+      <Scan>
+        <Applicable>
+          <FileExist FilePath="%appdata%\NeatDM"/>
+        </Applicable>
+        <Activate>
+          <General RootPath="%appdata%\NeatDM\" Flags="Directory"/>
+        </Activate>
+      </Scan>
+    </Item>
     
     <!--存在风险-->
     <Item Name="#CompactOs（较慢）" Level="0">
